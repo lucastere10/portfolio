@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NPL on Lucas Caldas</title>
+    <link>https://lucastere10.github.io/portfolio/tags/npl/</link>
+    <description>Recent content in NPL on Lucas Caldas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Apr 2022 11:25:05 -0400</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/tags/npl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project IX -  Wine Classification</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-9/</link>
+      <pubDate>Fri, 08 Apr 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-9/</guid>
+      <description>Datasets consists of red variants of the Portuguese &amp;ldquo;Vinho Verde&amp;rdquo; wine. Given the nature of the dataset we can make both classification and regression tasks. I&amp;rsquo;ll try to cluster the wine variants and predict wine quality
+Complete code is available at: Link key features: EDA, Clustering, Supervised Learning, Unsupervised Learning  Objectives:  EDA Wine Quality Prediction Wine Variants Clusterization  Target Feature: quality
+Phases:  Data Preparation Data Analysis Supervised Learning Unsupervised Learning  Data Preparation Head, info, desc, null values, etc&amp;hellip; This df have no null values, all numerical, the dream dataset (cry emote)</description>
+    </item>
+    
+  </channel>
+</rss>

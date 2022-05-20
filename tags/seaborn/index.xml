@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seaborn on Lucas Caldas</title>
+    <link>https://lucastere10.github.io/portfolio/tags/seaborn/</link>
+    <description>Recent content in Seaborn on Lucas Caldas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Apr 2021 11:00:59 -0400</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/tags/seaborn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project II: Amazon Bestselling Books</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-2/</link>
+      <pubDate>Sat, 10 Apr 2021 11:00:59 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-2/</guid>
+      <description>In this project we&amp;rsquo;ll use an amazon dataset with the top bestselling books from 2009 to 2019. The dataset consists of book&amp;rsquo;s name and author, along with user rating, number of reviews, price, release year and genre. In this project i&amp;rsquo;ll be looking for correlations between books&amp;rsquo; features.
+Complete code is available at: Link key features: EDA, Data Visualization, Seaborn  Objectives:  EDA Analyse for correlation between book features  Steps:  Data Preparation Data Analysis and Vizualization  Data Preparation Dataframe without NaN values, outliers or inconsistent data, we can go directly to the Analysis Phase.</description>
+    </item>
+    
+    <item>
+      <title>Project I: Netflix IMDB Scores</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-1/</link>
+      <pubDate>Sat, 10 Oct 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-1/</guid>
+      <description>In this project we&amp;rsquo;ll use a database with multiples original titles from Netflix. Our main objective here is to verifiy relations between the titles characteristics and its score at IMDB. It will be a simple project composed of few steps Será um projeto simples composto por poucas etapas.
+Complete code is available at: Link key features: EDA, Data Visualization, Matplotlib, Seaborn  Objetivos:  Define genre a language popularity Most watched languages Runtime-Score Ratio Verify correlations between genre and other characteristics  Etapas:  Data Preparation Data Analysis Gráficos &amp;amp; Resultados      Data Preparation The first step is to verify the integrity and characteristics of the database we are working on.</description>
+    </item>
+    
+  </channel>
+</rss>

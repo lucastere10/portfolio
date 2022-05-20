@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seaborn on Lucas Caldas (pt-br)</title>
+    <link>https://lucastere10.github.io/portfolio/pt-br/tags/seaborn/</link>
+    <description>Recent content in Seaborn on Lucas Caldas (pt-br)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Apr 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/pt-br/tags/seaborn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projeto I: Netflix IMDB Scores</title>
+      <link>https://lucastere10.github.io/portfolio/pt-br/post/project-1/</link>
+      <pubDate>Fri, 09 Apr 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/pt-br/post/project-1/</guid>
+      <description>Nesse projeto utilizaremos um banco de dados contento diversos títulos originais da Netflix. Nosso principal interesse aqui é verificar a relação entre as características de um título e seu desempenho na IMDB. Será um projeto simples composto por poucas etapas.
+O código completo está disponível aqui: Link key features: EDA, Data Visualization, Matplotlib, Seaborn  Objetivos:  Definir gêneros e idiomas mais populares Verificar a performace de cada gênero e idioma Definir idiomas mais assistidos Runtime-Score Ratio Verificar correlações entre gêneros e outras características  Etapas:  Data Preparation Data Analysis Gráficos &amp;amp; Resultados      Data Preparation O primeiro passo é verificar a integridade e as características do banco de dados que estamos trabalhando.</description>
+    </item>
+    
+  </channel>
+</rss>

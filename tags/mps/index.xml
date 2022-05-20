@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MPS on Lucas Caldas</title>
+    <link>https://lucastere10.github.io/portfolio/tags/mps/</link>
+    <description>Recent content in MPS on Lucas Caldas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Jan 2022 10:58:08 -0400</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/tags/mps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VBA I: Master Production Planning</title>
+      <link>https://lucastere10.github.io/portfolio/post/vba-1/</link>
+      <pubDate>Sun, 16 Jan 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/vba-1/</guid>
+      <description>Simple automated MPS (Master Production Schedule) sheet with use of forms and VBA. Content in portuguese.
+Available at: Google DriveObjective:  Create an automated MPS System  Functionalities:  Product list with automatic ID generation and add/remove options. Checks for minimum stock and minimum lot production. Real time graph att. Allow use of both fix and variable lot options.  Know Bugs:  Alow creation of sheets with forbidden characters.</description>
+    </item>
+    
+  </channel>
+</rss>

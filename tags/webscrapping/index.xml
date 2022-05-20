@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webscrapping on Lucas Caldas</title>
+    <link>https://lucastere10.github.io/portfolio/tags/webscrapping/</link>
+    <description>Recent content in Webscrapping on Lucas Caldas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Feb 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/tags/webscrapping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VBA II: Stocks Data Webscrapping</title>
+      <link>https://lucastere10.github.io/portfolio/post/vba-2/</link>
+      <pubDate>Tue, 09 Feb 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/vba-2/</guid>
+      <description>Sheet with webscrapping capacity. Information is retrivied from Reuters Portal and then organized in sheets. Content in portuguese.
+Available at: Google DriveObjective:  Create a sheet capable of colect internet stock data.  Functionalities:  Webscrapping stock data from diferent internet sources.  Requirements: Proper Webscrapping function will require the instalation of SeleniumBasic for Excel and ChromeDriver compatible with Google Chrome version.
+You can find SeleniumBasic hereand ChromeDriver here.</description>
+    </item>
+    
+  </channel>
+</rss>

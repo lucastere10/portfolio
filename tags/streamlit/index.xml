@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Streamlit on Lucas Caldas</title>
+    <link>https://lucastere10.github.io/portfolio/tags/streamlit/</link>
+    <description>Recent content in Streamlit on Lucas Caldas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 May 2022 11:25:05 -0400</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/tags/streamlit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project X -  Superstore Dashboard</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-10/</link>
+      <pubDate>Tue, 10 May 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-10/</guid>
+      <description>In this project we&amp;rsquo;ll use streamlit for dashboard. For Machine Learning we can make use of regression to target continuous Profit values or classification on bolean Profitable values.
+ key features: Dashboard, EDA, Supervised Learning  The Dashboard is available at: [Link]
+Complete code is available at: LinkObjectives:  EDA Dashboard Classification Problem  Target Feature: profit &amp;amp; profited
+Used Algorithims  Logistic Regression Knn RandomTreeClassifier  Phases:  Data Preparation Data Analysis Machine Learning Algorithm Dashboard Creation  Data Preparation Head, info, desc, null values, etc&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

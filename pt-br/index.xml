@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lucas Caldas: Portfolio on Lucas Caldas (pt-br)</title>
+    <link>https://lucastere10.github.io/portfolio/pt-br/</link>
+    <description>Recent content in Lucas Caldas: Portfolio on Lucas Caldas (pt-br)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Apr 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/pt-br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projeto I: Netflix IMDB Scores</title>
+      <link>https://lucastere10.github.io/portfolio/pt-br/post/project-1/</link>
+      <pubDate>Fri, 09 Apr 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/pt-br/post/project-1/</guid>
+      <description>Nesse projeto utilizaremos um banco de dados contento diversos títulos originais da Netflix. Nosso principal interesse aqui é verificar a relação entre as características de um título e seu desempenho na IMDB. Será um projeto simples composto por poucas etapas.
+O código completo está disponível aqui: Link key features: EDA, Data Visualization, Matplotlib, Seaborn  Objetivos:  Definir gêneros e idiomas mais populares Verificar a performace de cada gênero e idioma Definir idiomas mais assistidos Runtime-Score Ratio Verificar correlações entre gêneros e outras características  Etapas:  Data Preparation Data Analysis Gráficos &amp;amp; Resultados      Data Preparation O primeiro passo é verificar a integridade e as características do banco de dados que estamos trabalhando.</description>
+    </item>
+    
+    <item>
+      <title>Contato</title>
+      <link>https://lucastere10.github.io/portfolio/pt-br/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/pt-br/contact/</guid>
+      <description>   Platforma URL     E-mail: lucasmedeiroscaldas@yahoo.com.br   LinkedIn: https://www.linkedin.com/in/lucas-caldas50/   Github: https://github.com/lucastere10/lucas_portfolio   Instagram: https://www.instagram.com/lucas.mcaldas/   Currículo: Google Drive     Sinta-se a vontade para deixar uma mensagem:
+Your Name Email Address An email address is required.  Message   </description>
+    </item>
+    
+    <item>
+      <title>Sobre</title>
+      <link>https://lucastere10.github.io/portfolio/pt-br/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/pt-br/about/</guid>
+      <description>Lucas Caldas, estudante de Engenharia de Produção.
+Tenho interesse em Programação e Data Science.
+Voce pode encontrar meu currículo Aqui.
+Sinta-se a vontade para entra em Contato.
+Skills Excel:
+ VBA experiece, macro development for automation process apto ao desenvolvimento de macros em VBA para automação de processos, manipulação de dados e criação de gráficos personalizados.  Power BI
+ Capacitado para o uso das linguagems DAX e Power Query M.</description>
+    </item>
+    
+  </channel>
+</rss>
