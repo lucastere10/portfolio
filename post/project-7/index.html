@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project VII - Order Status Prediction | Lucas Caldas</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Data Science | Supervised Learning">
+    <meta name="generator" content="Hugo 0.94.1" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://lucastere10.github.io/portfolio/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    <meta property="og:title" content="Project VII - Order Status Prediction" />
+<meta property="og:description" content="Data Science | Supervised Learning" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lucastere10.github.io/portfolio/post/project-7/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-10T11:25:05-04:00" />
+<meta property="article:modified_time" content="2022-03-10T11:25:05-04:00" /><meta property="og:site_name" content="Lucas Caldas" />
+
+<meta itemprop="name" content="Project VII - Order Status Prediction">
+<meta itemprop="description" content="Data Science | Supervised Learning"><meta itemprop="datePublished" content="2022-03-10T11:25:05-04:00" />
+<meta itemprop="dateModified" content="2022-03-10T11:25:05-04:00" />
+<meta itemprop="wordCount" content="519">
+<meta itemprop="keywords" content="EDA,Supervised Learning,KNN,Decision Tree," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project VII - Order Status Prediction"/>
+<meta name="twitter:description" content="Data Science | Supervised Learning"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://lucastere10.github.io/portfolio/images/Project%20VII/background.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://lucastere10.github.io/portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Lucas Caldas
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/lucastere10" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/lucas-caldas50/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project VII - Order Status Prediction</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Data Science | Supervised Learning
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+    
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lucastere10.github.io/portfolio/post/project-7/&amp;title=Project%20VII%20-%20Order%20Status%20Prediction" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project VII - Order Status Prediction</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-03-10T11:25:05-04:00">March 10, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Boss Leathers is a small leather products business which has recently started selling its products on Amazon. Currently, it has around 40 SKUs registered in the Indian Marketplace. Over the past few months, it has incurred some loss due to return orders. Now, Boss Leather seeks help to predict the liklihood of a new order being rejected. This would help them to take necessary actions and subsequently reduce the loss.</p>
+<p>Complete code is available at: <a href=https://github.com/lucastere10/projects/tree/main/Python%20Projects/Projekt%20VII%20-%20Order%20Status%20Prediction
+    
+    target=_blank rel="noopener noreferrer"
+>Link</a>
+</p>
+<pre><code>        key features: EDA, Supervised Learning, KNN, Decision Tree
+</code></pre>
+<h3 id="objective">Objective:</h3>
+<p>Build a model which would predict the order status (Delivered to buyer or Returned to seller)</p>
+<p>Target Feature: order_status</p>
+<h4 id="used-algorithims">Used Algorithims:</h4>
+<ul>
+<li>KNeighborsClassifier</li>
+<li>DecisionTreeClassifier</li>
+</ul>
+<h3 id="phases">Phases:</h3>
+<ul>
+<li>Data Preparation</li>
+<li>Data Analysis</li>
+<li>Supervised Learning</li>
+</ul>
+<h3 id="data-preparation">Data Preparation</h3>
+<p>First lets take a look at our data and make the necessary adjustments</p>
+<pre><code>        df.head()
+        df.describe()
+</code></pre>
+
+
+
+
+  
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<h5 id="crude-dataframe">Crude DataFrame</h5>
+
+<link rel="stylesheet" href=https://lucastere10.github.io/portfolio/css/hugo-easy-gallery.css />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/df1.png" alt="Crude DataFrame"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/df1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Crude DataFrame</p>
+      </figcaption>
+  </figure>
+</div>
+
+<pre><code>        1. Deal with nans
+        2. Remove currency symbol and commas
+        3. Remove unused columns
+        4. Transform date format
+        5. Transform numeric values
+
+        #dealing with NaNs
+        #change cod to online payment
+        df['cod'] = df['cod'].fillna('Online Payment')
+        #shipping fee as as free shipping
+        df['shipping_fee'] = df['shipping_fee'].fillna(&quot;0.00&quot;)
+        #item total as free also
+        df['item_total'] = df['item_total'].fillna(&quot;₹0.00&quot;)
+        #remove commas
+        df['ship_city'] = df['ship_city'].str.split(pat = &quot;,&quot;).str[0]
+        #remove &quot;SKU: &quot;
+        df['sku'] = df['sku'].str.split(pat = &quot;: &quot;).str[1]
+        #city and state uppercase
+        df['ship_city'] = df['ship_city'].str.upper()
+        df['ship_state'] = df['ship_state'].str.upper()
+        #transform date format
+        df['order_date'] = pd.to_datetime(df['order_date'].astype(str).str.replace('IST','')).dt.date
+        #remove currency symbol and comma on values over 1000
+        xrem = ['item_total', 'shipping_fee']
+        for i in xrem:
+            df[i] = df[i].str[1:]
+            df[i] = df[i].replace(',','', regex=True)
+        #remove unused columns
+        df = df.drop(columns = ['order_no','description'])
+        #change numeric values
+        df = df.astype({'item_total': 'float64', 'shipping_fee': 'float64', 'quantity': 'int64'})
+        df.head()
+</code></pre>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/df2.png" alt="Final DataFrame"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/df2.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Final DataFrame</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="nans-values">NaNs Values</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/nans.png" alt="NaNs Values Before and After"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/nans.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>NaNs Values Before and After</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="correlation-matrix">Correlation Matrix</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/corr.png" alt="Correlation Matrix"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/corr.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Correlation Matrix</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h3 id="eda">EDA</h3>
+<p>
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/graph1.png" alt="Order Status"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/graph1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Order Status</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/graph2.png" alt="Order Status by State"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/graph2.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Order Status by State</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/graph3.png" alt="Item Total per Date"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/graph3.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Item Total per Date</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/graph7.png" alt="Count Item Total by Value"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/graph7.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Count Item Total by Value</p>
+      </figcaption>
+  </figure>
+</div>
+</p>
+<h4 id="check-for-outliers">Check for outliers</h4>
+<p>
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/graph4.png" />
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/graph4.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/graph5.png" />
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/graph5.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+</p>
+<h4 id="first-conclusion">First Conclusion</h4>
+<p>After give a good looking at our data, we can define the follow:</p>
+<ul>
+<li>Small number of interations</li>
+<li>High number of outliers</li>
+<li>Most atributes are not normalized</li>
+<li>No atribute with big correlation with order_status</li>
+<li>Huge disparity between order_status values</li>
+</ul>
+<p>Now that we know our problems, here is what we&rsquo;ll have to do:</p>
+<ul>
+<li>Normalize columns: [item_total;shipping_fee]</li>
+<li>Oversample order_status [Delivered]</li>
+<li>Downsample order_status [Returned]</li>
+</ul>
+<p>OBS: Since we have lots of zero values on all columns its wise to use log(x+1) transformation
+Ok, lets do it</p>
+<h4 id="atribute-normalization">Atribute Normalization</h4>
+<pre><code>      #make normalized df with log(x+1) transformation
+      df_normalized = df
+      def log_transform(col):
+      return np.log(col[0] + 1)
+      df_normalized['item_total'] = df[['item_total']].apply(log_transform, axis=1)
+      df_normalized['shipping_fee'] = df[['shipping_fee']].apply(log_transform, axis=1)
+</code></pre>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/graph6.png" />
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/graph6.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h4 id="oversample-and-downsample">Oversample and Downsample</h4>
+<pre><code>      #create dfs
+      df_0 = df_normalized[df_normalized.order_status_le==0] #sub
+      df_1 = df_normalized[df_normalized.order_status_le==1] #add  
+      # oversample:
+      df_1_upsampled = resample(df_1, replace=True, n_samples=85, random_state=12)
+      # downsample:
+      df_0_downsampled = df_normalized[df_normalized.order_status_le==0].sample(n=85).reset_index(drop=True)      
+      # Combine downsampled majority class with upsampled minority class
+      df_balance = pd.concat([df_1_upsampled, df_0_downsampled]).reset_index(drop=True)
+</code></pre>
+<h3 id="supervised-learning">Supervised Learning</h3>
+<pre><code>      #label encoder target value
+      le = LabelEncoder()
+      df['order_status_le'] = le.fit_transform(df['order_status'])
+      list(le.classes_)
+      #Train_test_split
+      X = df_balance[['item_total','shipping_fee']]
+      y = df_balance['order_status_le']
+      X_train,X_test,y_train,y_test = train_test_split(X,y)
+      #scalling
+      scaler = StandardScaler()
+      X_train = scaler.fit_transform(X_train)
+      X_test = scaler.transform(X_test)
+</code></pre>
+<h4 id="knn">KNN</h4>
+<pre><code>      knn = KNeighborsClassifier(n_neighbors=3)
+      knn.fit(X_train,y_train)
+      knn_pred = knn.predict(X_test)
+      acc = round(accuracy_score(y_test, knn_pred)*100,2)
+</code></pre>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/result1.png" />
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/result1.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h4 id="decision-tree">Decision Tree</h4>
+<pre><code>      dtc = DecisionTreeClassifier()
+      dtc.fit(X_train,y_train)
+      dtc_pred = dtc.predict(X_test)
+      acc = round(accuracy_score(y_test, dtc_pred)*100,2)
+</code></pre>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20VII/result2.png" />
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20VII/result2.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h3 id="conclusions">Conclusions</h3>
+<ul>
+<li>Data too small to make good predictions</li>
+<li>Dificult to predict true negatives</li>
+<li>Less then 10% of return rate</li>
+</ul>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/eda" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">EDA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/supervised-learning" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Supervised Learning</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/knn" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">KNN</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/decision-tree" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Decision Tree</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-5/">Project V: Customer Personality Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-3/">Project III: Airbnb Sentiment Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-2/">Project II: Amazon Bestselling Books</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-1/">Project I: Netflix IMDB Scores</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lucastere10.github.io/portfolio/" >
+    &copy;  Lucas Caldas 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/lucastere10" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/lucas-caldas50/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://lucastere10.github.io/portfolio/js/load-photoswipe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Lucas Caldas</title>
+    <link>https://lucastere10.github.io/portfolio/post/</link>
+    <description>Recent content in Projects on Lucas Caldas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://lucastere10.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project X -  Superstore Dashboard</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-10/</link>
+      <pubDate>Tue, 10 May 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-10/</guid>
+      <description>In this project we&amp;rsquo;ll use streamlit for dashboard. For Machine Learning we can make use of regression to target continuous Profit values or classification on bolean Profitable values.
+ key features: Dashboard, EDA, Supervised Learning  The Dashboard is available at: [Link]
+Complete code is available at: LinkObjectives:  EDA Dashboard Classification Problem  Target Feature: profit &amp;amp; profited
+Used Algorithims  Logistic Regression Knn RandomTreeClassifier  Phases:  Data Preparation Data Analysis Machine Learning Algorithm Dashboard Creation  Data Preparation Head, info, desc, null values, etc&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Project IX -  Wine Classification</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-9/</link>
+      <pubDate>Fri, 08 Apr 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-9/</guid>
+      <description>Datasets consists of red variants of the Portuguese &amp;ldquo;Vinho Verde&amp;rdquo; wine. Given the nature of the dataset we can make both classification and regression tasks. I&amp;rsquo;ll try to cluster the wine variants and predict wine quality
+Complete code is available at: Link key features: EDA, Clustering, Supervised Learning, Unsupervised Learning  Objectives:  EDA Wine Quality Prediction Wine Variants Clusterization  Target Feature: quality
+Phases:  Data Preparation Data Analysis Supervised Learning Unsupervised Learning  Data Preparation Head, info, desc, null values, etc&amp;hellip; This df have no null values, all numerical, the dream dataset (cry emote)</description>
+    </item>
+    
+    <item>
+      <title>Project VIII - Music Genre Classification</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-8/</link>
+      <pubDate>Mon, 28 Mar 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-8/</guid>
+      <description>As simple as it gets, make a Music Genre Prediction based on the data given.
+Complete code is available at: Link key features: EDA, Supervised Learning, Logistic Regression, KNN, Decision Tree, GradientBoostingClassifier  Objectives:  Music Genre Prediction  Target Feature: quality
+Used Algorithims  KNeighborsClassifier DecisionTreeClassifier  Phases:  Data Preparation Data Analysis Supervised Learning  Data Preparation Normal procedure: head, info, describe, look for NaNs and Nulls, etc.</description>
+    </item>
+    
+    <item>
+      <title>Project VII - Order Status Prediction</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-7/</link>
+      <pubDate>Thu, 10 Mar 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-7/</guid>
+      <description>Boss Leathers is a small leather products business which has recently started selling its products on Amazon. Currently, it has around 40 SKUs registered in the Indian Marketplace. Over the past few months, it has incurred some loss due to return orders. Now, Boss Leather seeks help to predict the liklihood of a new order being rejected. This would help them to take necessary actions and subsequently reduce the loss.</description>
+    </item>
+    
+    <item>
+      <title>Project V: Customer Personality Analysis</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-5/</link>
+      <pubDate>Mon, 28 Feb 2022 11:14:48 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-5/</guid>
+      <description>This project will use a dataset with a company’s ideal customers attributes. The dataset consists of the costumers basics information, including ID, birth year, education, marriage status and income. In this project my interest is try to understand the costumer profile and analyze their behavior. Being capable of clustering costumers by their interests is great to make products based on their expectations, allowing a further analysis on product mix. Considering that, i&amp;rsquo;ll cluster costumers based on their similarities and them show what to focus based on each cluster.</description>
+    </item>
+    
+    <item>
+      <title>VBA I: Master Production Planning</title>
+      <link>https://lucastere10.github.io/portfolio/post/vba-1/</link>
+      <pubDate>Sun, 16 Jan 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/vba-1/</guid>
+      <description>Simple automated MPS (Master Production Schedule) sheet with use of forms and VBA. Content in portuguese.
+Available at: Google DriveObjective:  Create an automated MPS System  Functionalities:  Product list with automatic ID generation and add/remove options. Checks for minimum stock and minimum lot production. Real time graph att. Allow use of both fix and variable lot options.  Know Bugs:  Alow creation of sheets with forbidden characters.</description>
+    </item>
+    
+    <item>
+      <title>Project IV: Womans Clothing Project</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-4/</link>
+      <pubDate>Mon, 13 Sep 2021 11:15:58 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-4/</guid>
+      <description>In this project we&amp;rsquo;ll use an e-commerce dataset from a womens&amp;rsquo;s clothing store. The dataset constitute of some client information, a titled review with rating and some product intel. My interest here is to analyze the costumer profile, product performace and make a Sentiment Analysis with TextBlox. As an extra, I will also make a simple Word Cloud.
+Complete code is available at: Link key features: EDA, Data Cleaning, Data Visualization, Sentiment Analysis, NLP, Word Cloud  Objectives:  EDA Analyse customer preferences Analyse for correlation between product features and customer preferences Define what makes a good product Define what makes product get a good review Create a simple word count  Phases:  Data Preparation Data Analysis and Vizualization NLP and WordCloud  Data Preparation Same as always, drop unused columns, fill NaNs, remove outliers.</description>
+    </item>
+    
+    <item>
+      <title>Project III: Airbnb Sentiment Analysis</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-3/</link>
+      <pubDate>Sun, 27 Jun 2021 11:13:32 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-3/</guid>
+      <description>Data contais Airbnb overviews from New Orleans locations. It will be the first time I&amp;rsquo;ll try to make a NLP Sentiment Analisys and WordCloud. The dataset consists of the costumers basics information, including ID, location name, description, location and some host data.
+Complete code is available at: Link key features: EDA, Data Visualization, NPL, WordClowd.  Objectives:  EDA NLP WordCloud  Steps:  Data Preparation Data Analysis and Vizualization NLP WordClowd  Data Preparation This step consisted of dropping unecessary columns and rows with NaN values.</description>
+    </item>
+    
+    <item>
+      <title>Project II: Amazon Bestselling Books</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-2/</link>
+      <pubDate>Sat, 10 Apr 2021 11:00:59 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-2/</guid>
+      <description>In this project we&amp;rsquo;ll use an amazon dataset with the top bestselling books from 2009 to 2019. The dataset consists of book&amp;rsquo;s name and author, along with user rating, number of reviews, price, release year and genre. In this project i&amp;rsquo;ll be looking for correlations between books&amp;rsquo; features.
+Complete code is available at: Link key features: EDA, Data Visualization, Seaborn  Objectives:  EDA Analyse for correlation between book features  Steps:  Data Preparation Data Analysis and Vizualization  Data Preparation Dataframe without NaN values, outliers or inconsistent data, we can go directly to the Analysis Phase.</description>
+    </item>
+    
+    <item>
+      <title>VBA III: Customer &amp; Provider Registration</title>
+      <link>https://lucastere10.github.io/portfolio/post/vba-3/</link>
+      <pubDate>Tue, 23 Feb 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/vba-3/</guid>
+      <description>Using VBA and forms, this sheet can easily register customers, providers and products. Content in portuguese.
+Available at: Google DriveObjective:  Develop a system with Customer, Provider and Product registration.  Functionalities:  Automatic ID generation Search with ID or Name Can att values Webscraping CEP Adress (requires SeleniumBasic)  Requirements: Proper Webscrapping function will require the instalation of SeleniumBasic for Excel and ChromeDriver compatible with Google Chrome version.</description>
+    </item>
+    
+    <item>
+      <title>VBA II: Stocks Data Webscrapping</title>
+      <link>https://lucastere10.github.io/portfolio/post/vba-2/</link>
+      <pubDate>Tue, 09 Feb 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/vba-2/</guid>
+      <description>Sheet with webscrapping capacity. Information is retrivied from Reuters Portal and then organized in sheets. Content in portuguese.
+Available at: Google DriveObjective:  Create a sheet capable of colect internet stock data.  Functionalities:  Webscrapping stock data from diferent internet sources.  Requirements: Proper Webscrapping function will require the instalation of SeleniumBasic for Excel and ChromeDriver compatible with Google Chrome version.
+You can find SeleniumBasic hereand ChromeDriver here.</description>
+    </item>
+    
+    <item>
+      <title>Project I: Netflix IMDB Scores</title>
+      <link>https://lucastere10.github.io/portfolio/post/project-1/</link>
+      <pubDate>Sat, 10 Oct 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/project-1/</guid>
+      <description>In this project we&amp;rsquo;ll use a database with multiples original titles from Netflix. Our main objective here is to verifiy relations between the titles characteristics and its score at IMDB. It will be a simple project composed of few steps Será um projeto simples composto por poucas etapas.
+Complete code is available at: Link key features: EDA, Data Visualization, Matplotlib, Seaborn  Objetivos:  Define genre a language popularity Most watched languages Runtime-Score Ratio Verify correlations between genre and other characteristics  Etapas:  Data Preparation Data Analysis Gráficos &amp;amp; Resultados      Data Preparation The first step is to verify the integrity and characteristics of the database we are working on.</description>
+    </item>
+    
+    <item>
+      <title>VBA IV: Free Cash Flow</title>
+      <link>https://lucastere10.github.io/portfolio/post/vba-4/</link>
+      <pubDate>Sat, 22 Aug 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://lucastere10.github.io/portfolio/post/vba-4/</guid>
+      <description>Highly automated sheet developed during college. Based on a case study about the economical viability of a landfill construction. This sheet includes all steps from choosing the landfill location, financing of pre-implementation phase and creation of Free Cash Flow for actionists on different scenarios. Content in portuguese.
+Available at: Google DriveObjective:  Create an automated MPS System  Functionalities:  Allows multiples datasets Positive, Pessimist and Realist scenarios Automatic Financing, Payback, VPL, TIR and MTIR calculation.</description>
+    </item>
+    
+  </channel>
+</rss>

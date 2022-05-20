@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project IX -  Wine Classification | Lucas Caldas</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="EDA | Clustering | Target Prediction">
+    <meta name="generator" content="Hugo 0.94.1" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://lucastere10.github.io/portfolio/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    <meta property="og:title" content="Project IX -  Wine Classification" />
+<meta property="og:description" content="EDA | Clustering | Target Prediction" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lucastere10.github.io/portfolio/post/project-9/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-08T11:25:05-04:00" />
+<meta property="article:modified_time" content="2022-04-08T11:25:05-04:00" /><meta property="og:site_name" content="Lucas Caldas" />
+
+<meta itemprop="name" content="Project IX -  Wine Classification">
+<meta itemprop="description" content="EDA | Clustering | Target Prediction"><meta itemprop="datePublished" content="2022-04-08T11:25:05-04:00" />
+<meta itemprop="dateModified" content="2022-04-08T11:25:05-04:00" />
+<meta itemprop="wordCount" content="870">
+<meta itemprop="keywords" content="EDA,Data Visualization,NPL,WordClowd," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project IX -  Wine Classification"/>
+<meta name="twitter:description" content="EDA | Clustering | Target Prediction"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://lucastere10.github.io/portfolio/images/Project%20IX/background.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://lucastere10.github.io/portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Lucas Caldas
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/lucastere10" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/lucas-caldas50/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project IX -  Wine Classification</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              EDA | Clustering | Target Prediction
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+    
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lucastere10.github.io/portfolio/post/project-9/&amp;title=Project%20IX%20-%20%20Wine%20Classification" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project IX -  Wine Classification</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-04-08T11:25:05-04:00">April 8, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Datasets consists of red variants of the Portuguese &ldquo;Vinho Verde&rdquo; wine. Given the nature of the dataset we can make both classification and regression tasks. I&rsquo;ll try to cluster the wine variants and predict wine quality</p>
+<p>Complete code is available at: <a href=https://github.com/lucastere10/projects/tree/main/Python%20Projects/Projekt%20IX%20-%20Wine%20Classification
+    
+    target=_blank rel="noopener noreferrer"
+>Link</a>
+</p>
+<pre><code>        key features: EDA, Clustering, Supervised Learning, Unsupervised Learning
+</code></pre>
+<h4 id="objectives">Objectives:</h4>
+<ul>
+<li>EDA</li>
+<li>Wine Quality Prediction</li>
+<li>Wine Variants Clusterization</li>
+</ul>
+<p>Target Feature: quality</p>
+<h4 id="phases">Phases:</h4>
+<ul>
+<li>Data Preparation</li>
+<li>Data Analysis</li>
+<li>Supervised Learning</li>
+<li>Unsupervised Learning</li>
+</ul>
+<h3 id="data-preparation">Data Preparation</h3>
+<p>Head, info, desc, null values, etc&hellip;
+This df have no null values, all numerical, the dream dataset (cry emote)</p>
+<h3 id="data-analysis">Data Analysis</h3>
+<h5 id="correlation-matrix">Correlation Matrix</h5>
+<p>
+
+
+
+  
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href=https://lucastere10.github.io/portfolio/css/hugo-easy-gallery.css />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/corr.png" alt="Correlation Matrix"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/corr.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Correlation Matrix</p>
+      </figcaption>
+  </figure>
+</div>
+</p>
+<pre><code>quality                 1.000000
+alcohol                 0.476166
+sulphates               0.251397
+citric acid             0.226373
+fixed acidity           0.124052
+residual sugar          0.013732
+free sulfur dioxide    -0.050656
+pH                     -0.057731
+chlorides              -0.128907
+density                -0.174919
+total sulfur dioxide   -0.185100
+volatile acidity       -0.390558
+Name: quality, dtype: float64
+</code></pre>
+<p>No big correlation with quality atribute</p>
+<h5 id="wine-quality-distribution">Wine Quality Distribution</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/graph1.png" alt="Wine Quality Distribution"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/graph1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Wine Quality Distribution</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="alcohol-variation-by-quality">Alcohol Variation by Quality</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/graph3.png" alt="Alcohol Variation by Quality"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/graph3.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Alcohol Variation by Quality</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="volatile-acidity-variation-by-quality">Volatile Acidity Variation by Quality</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/graph4.png" alt="Volatile Acidity Variation by Quality"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/graph4.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Volatile Acidity Variation by Quality</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="histogram">Histogram</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/hist1.png" alt="Histogram"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/hist1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Histogram</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="outliers">Outliers</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/graph2.png" alt="Outliers"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/graph2.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Outliers</p>
+      </figcaption>
+  </figure>
+</div>
+
+<p>Well, that is a really unhealthy number of outliers</p>
+<p>Also, we can see some correlation between quality and a small value of volatile acidity, moderate value of citric acid and high value of alcohol, with a good variation between 10% and 14% on the last.</p>
+<h4 id="data-conclusion">Data conclusion</h4>
+<p>After give a good looking at our data, we can define the follow:</p>
+<ul>
+<li>Huge number of outliers</li>
+<li>Some atributes are not normalized</li>
+<li>No atribute with big correlation with quality</li>
+<li>Unbalaced quantity gap between quality 5/6 wines to others</li>
+</ul>
+<p>Now that we know our problems, here is what we&rsquo;ll have to do:</p>
+<ul>
+<li>Normalize columns: [Residual Sugar; Chlorides; Free Sulphur Dioxide; Total Sulphur Dioxide; Sulphates]</li>
+<li>Oversample Quality [3; 4; 7; 8]</li>
+<li>Downsample Quality [5;6]</li>
+</ul>
+<p>Ok, lets do it</p>
+<h4 id="atribute-normalization">Atribute Normalization</h4>
+<pre><code>#make normalized df
+df_normalized = df
+def log_transform(col):
+    return np.log(col[0])
+df_normalized['residual sugar'] = df[['residual sugar']].apply(log_transform, axis=1)
+df_normalized['chlorides'] = df[['chlorides']].apply(log_transform, axis=1)
+df_normalized['free sulfur dioxide'] = df[['free sulfur dioxide']].apply(log_transform, axis=1)
+df_normalized['total sulfur dioxide'] = df[['total sulfur dioxide']].apply(log_transform, axis=1)
+df_normalized['sulphates'] = df[['sulphates']].apply(log_transform, axis=1)
+</code></pre>
+<h5 id="normalized-histogram">Normalized Histogram</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/hist2.png" alt="Normalized Histogram"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/hist2.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Normalized Histogram</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="oversample-and-downsample">Oversample and Downsample</h4>
+<pre><code># oversample:
+df_3_upsampled = resample(df_3, replace=True, n_samples=600, random_state=12)
+df_4_upsampled = resample(df_4, replace=True, n_samples=600, random_state=12)
+df_7_upsampled = resample(df_7, replace=True, n_samples=600, random_state=12)
+df_8_upsampled = resample(df_8, replace=True, n_samples=600, random_state=12)
+# downsample:
+df_5_downsampled = df_normalized[df_normalized.quality==5].sample(n=600).reset_index(drop=True)
+df_6_downsampled = df_normalized[df_normalized.quality==6].sample(n=600).reset_index(drop=True)
+</code></pre>
+<h3 id="supervised-learning">Supervised Learning</h3>
+<p>Before we use our selected algorithims firts we need to fit and scale our data.</p>
+<pre><code>#train_test_split
+X = df_balance.drop('quality',axis = 1,)
+y = df_balance['quality']
+X_train,X_test,y_train,y_test = train_test_split(X,y)
+#scalling
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+</code></pre>
+<h4 id="logistic-regression">Logistic Regression</h4>
+<pre><code>lr = LogisticRegression()
+lr.fit(X_train,y_train)
+lr_pred = lr.predict(X_test)
+</code></pre>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/resultlr.png" alt="LR Results"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/resultlr.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>LR Results</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="knn">KNN</h4>
+<pre><code>For n_neighbors =  3 , score:  88.0 %
+For n_neighbors =  5 , score:  87.78 %
+For n_neighbors =  10 , score:  85.56 %
+For n_neighbors =  15 , score:  85.44 %
+For n_neighbors =  20 , score:  83.89 %
+For n_neighbors =  30 , score:  83.44 %
+</code></pre>
+<p>.</p>
+<pre><code>knn = KNeighborsClassifier(n_neighbors=5)
+knn_fit = knn.fit(X_train,y_train)
+knn_pred = knn_fit.predict(X_test)
+acc = round(accuracy_score(y_test, knn_pred)*100,2)
+print(&quot;Accurracy Score: &quot; + str(acc) + &quot;%&quot;)
+</code></pre>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/resultknn.png" alt="KNN Results"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/resultknn.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>KNN Results</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="decision-tree">Decision Tree</h4>
+<pre><code>dtc = DecisionTreeClassifier()
+dtc.fit(X_train,y_train)
+dtc_pred = dtc.predict(X_test)
+</code></pre>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/resultdtree.png" alt="Decision Tree Results"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/resultdtree.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Decision Tree Results</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+<h4 id="clustering">Clustering</h4>
+<p>To make clustering works we&rsquo;ill try to select the most significant features. This can be achieved through feature selection or dimensionality reduction:</p>
+<ul>
+<li>
+<p>Feature selection yields a subset of features from the original set of features, which are best representatives of the data. It is an exhaustive search.</p>
+</li>
+<li>
+<p>Dimensionality reduction is generic and only depends on the data and not on what you plan to do with it.</p>
+</li>
+</ul>
+<p>Feature selection is good in classification problems because you select the features that will help you classify your data better. Since we just want to project the data into a lower dimensionality space, we&rsquo;ll go with dimension reduction using PCA.</p>
+<pre><code>#fit StandartScaling
+scale = StandardScaler()
+scale.fit(df)
+scale_df = pd.DataFrame(scale.transform(df), columns = df.columns )
+#Initiating PCA to reduce dimentions aka features to 3
+pca = PCA(n_components=3)
+pca.fit(scale_df)
+pca_df = pd.DataFrame(pca.transform(scale_df), columns=([&quot;col1&quot;,&quot;col2&quot;, &quot;col3&quot;]))
+</code></pre>
+<h5 id="dimension-reduced-histogram">Dimension Reduced Histogram</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/hist3.png" alt="Dimension Reduced Histogram"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/hist3.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Dimension Reduced Histogram</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="3d-projection-of-data-in-the-reduced-dimension">3D Projection of data in the reduced dimension</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/3dplot.png" alt="3D Projection of data in the reduced dimension"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/3dplot.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>3D Projection of data in the reduced dimension</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="aglomerative-clustering">Aglomerative Clustering</h4>
+<h5 id="ac-elbow-method">AC Elbow Method</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/elbow_ac.png" alt="AC Elbow Method"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/elbow_ac.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>AC Elbow Method</p>
+      </figcaption>
+  </figure>
+</div>
+
+<pre><code>#Initiating the Agglomerative Clustering model
+AC = AgglomerativeClustering(n_clusters=7)
+# fit model and predict clusters
+df_ac = AC.fit_predict(pca_df)
+pca_df[&quot;ac_clusters&quot;] = df_ac
+#Adding the Clusters feature to the orignal and scaled dataframe.
+df[&quot;ac_clusters&quot;] = df_ac
+scale_df[&quot;ac_clusters&quot;] = df_ac
+</code></pre>
+<h5 id="3d-plot-of-ac-clusters">3D Plot of AC Clusters</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/3dplot_ac.png" alt="3D plot of AC Clusters"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/3dplot_ac.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>3D plot of AC Clusters</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="kmeans">Kmeans</h4>
+<h5 id="kmeans-elbow-method">Kmeans Elbow Method</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/elbow_kmeans.png" alt="Kmeans Elbow Method"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/elbow_kmeans.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Kmeans Elbow Method</p>
+      </figcaption>
+  </figure>
+</div>
+
+<pre><code>#Initiating the kmeans model
+kmeans = KMeans(n_clusters = 7)
+# fit model and predict clusters
+df_kmeans = kmeans.fit_predict(pca_df)
+pca_df[&quot;kmeans_clusters&quot;] = df_kmeans
+#Adding the Clusters feature to the orignal and scaled dataframe.
+df[&quot;kmeans_clusters&quot;] = df_kmeans
+scale_df[&quot;kmeans_clusters&quot;] = df_kmeans
+</code></pre>
+<h5 id="3d-plot-of-ac-kmeans">3D Plot of AC Kmeans</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/3dplot_kmeans.png" alt="3D Plot of AC Kmeans"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/3dplot_kmeans.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>3D Plot of AC Kmeans</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h3 id="clustering-results">Clustering Results</h3>
+<h4 id="kmeans-1">Kmeans</h4>
+<h5 id="kmeans-cluster-qualityalcoholsulphates-values">Kmeans Cluster Quality/Alcohol/Sulphates Values</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans1.png" alt="Kmeans Cluster Quality/Alcohol/Sulphates Values"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Kmeans Cluster Quality/Alcohol/Sulphates Values</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="kmeans-cluster-volatile-acidity-variation-by-quality">Kmeans Cluster Volatile Acidity variation by Quality</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans2.png" alt="Kmeans Cluster Volatile Acidity variation by Quality"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans2.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Kmeans Cluster Volatile Acidity variation by Quality</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="kmeans-cluster-outliers">Kmeans Cluster Outliers</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans3.png" alt="Kmeans Cluster Outliers"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans3.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Kmeans Cluster Outliers</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="quality-polar-plot">Quality Polar Plot</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans4.png" alt="Quality Polar Plot"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans4.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Quality Polar Plot</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="clusters-polar-plot">Clusters Polar Plot</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans5.png" alt="Clusters Polar Plot"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_kmeans5.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Clusters Polar Plot</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="ac-clustering">AC Clustering</h4>
+<h5 id="ac-cluster-qualityalcoholsulphates-values">AC Cluster Quality/Alcohol/Sulphates Values</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac1.png" alt="AC Cluster Quality/Alcohol/Sulphates Values"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>AC Cluster Quality/Alcohol/Sulphates Values</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="ac-cluster-volatile-acidity-variation-by-quality">AC Cluster Volatile Acidity variation by Quality</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac2.png" alt="AC Cluster Volatile Acidity variation by Quality"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac2.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>AC Cluster Volatile Acidity variation by Quality</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="ac-cluster-outliers">AC Cluster Outliers</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac3.png" alt="AC Cluster Outliers"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac3.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>AC Cluster Outliers</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="quality-polar-plot-1">Quality Polar Plot</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac4.png" alt="Quality Polar Plot"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac4.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Quality Polar Plot</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="clusters-polar-plot-1">Clusters Polar Plot</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac5.png" alt="Clusters Polar Plot"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_ac5.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Clusters Polar Plot</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h3 id="conclusions">Conclusions</h3>
+<h5 id="clusters-quality-comparison">Clusters Quality Comparison</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IX/g_final.png" alt="Clusters Quality Comparison"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IX/g_final.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Clusters Quality Comparison</p>
+      </figcaption>
+  </figure>
+</div>
+
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/eda" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">EDA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/data-visualization" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Data Visualization</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/npl" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">NPL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://lucastere10.github.io/portfolio/tags/wordclowd" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">WordClowd</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-5/">Project V: Customer Personality Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-2/">Project II: Amazon Bestselling Books</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-1/">Project I: Netflix IMDB Scores</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-8/">Project VIII - Music Genre Classification</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-7/">Project VII - Order Status Prediction</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://lucastere10.github.io/portfolio/post/project-3/">Project III: Airbnb Sentiment Analysis</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lucastere10.github.io/portfolio/" >
+    &copy;  Lucas Caldas 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/lucastere10" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/lucas-caldas50/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://lucastere10.github.io/portfolio/js/load-photoswipe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

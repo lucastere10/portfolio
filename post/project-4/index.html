@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project IV: Womans Clothing Project | Lucas Caldas</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="EDA | NLP | WordCloud">
+    <meta name="generator" content="Hugo 0.94.1" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://lucastere10.github.io/portfolio/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    <meta property="og:title" content="Project IV: Womans Clothing Project" />
+<meta property="og:description" content="EDA | NLP | WordCloud" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lucastere10.github.io/portfolio/post/project-4/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-13T11:15:58-04:00" />
+<meta property="article:modified_time" content="2021-09-13T11:15:58-04:00" /><meta property="og:site_name" content="Lucas Caldas" />
+
+<meta itemprop="name" content="Project IV: Womans Clothing Project">
+<meta itemprop="description" content="EDA | NLP | WordCloud"><meta itemprop="datePublished" content="2021-09-13T11:15:58-04:00" />
+<meta itemprop="dateModified" content="2021-09-13T11:15:58-04:00" />
+<meta itemprop="wordCount" content="392">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project IV: Womans Clothing Project"/>
+<meta name="twitter:description" content="EDA | NLP | WordCloud"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://lucastere10.github.io/portfolio/images/Project%20IV/background2.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://lucastere10.github.io/portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Lucas Caldas
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://lucastere10.github.io/portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/lucastere10" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/lucas-caldas50/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project IV: Womans Clothing Project</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              EDA | NLP | WordCloud
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+    
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://lucastere10.github.io/portfolio/post/project-4/&amp;title=Project%20IV:%20Womans%20Clothing%20Project" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project IV: Womans Clothing Project</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-09-13T11:15:58-04:00">September 13, 2021</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>In this project we&rsquo;ll use an e-commerce dataset from a womens&rsquo;s clothing store. The dataset constitute of some client information, a titled review with rating and some product intel. My interest here is to analyze the costumer profile, product performace and make a Sentiment Analysis with TextBlox. As an extra, I will also make a simple Word Cloud.</p>
+<p>Complete code is available at: <a href=https://github.com/lucastere10/projects/tree/main/Python%20Projects/Projekt%20IV%20-%20Womans%20Clothing%20Project
+    
+    target=_blank rel="noopener noreferrer"
+>Link</a>
+</p>
+<pre><code>        key features: EDA, Data Cleaning, Data Visualization, Sentiment Analysis, NLP, Word Cloud
+</code></pre>
+<h4 id="objectives">Objectives:</h4>
+<ul>
+<li>EDA</li>
+<li>Analyse customer preferences</li>
+<li>Analyse for correlation between product features and customer preferences</li>
+<li>Define what makes a good product</li>
+<li>Define what makes product get a good review</li>
+<li>Create a simple word count</li>
+</ul>
+<h4 id="phases">Phases:</h4>
+<ul>
+<li>Data Preparation</li>
+<li>Data Analysis and Vizualization</li>
+<li>NLP and WordCloud</li>
+</ul>
+<h3 id="data-preparation">Data Preparation</h3>
+<p>Same as always, drop unused columns, fill NaNs, remove outliers. The null values were mostly in the title row, with some minor blank reviews. Change the NaN titles to &lsquo;No Title&rsquo; and the NaN reviews to &lsquo;Blank Review&rsquo;.</p>
+<p>Most NaN values on Division/Departament/Class were related too&hellip; socks? We also have at least 3 hoodies entries and a completely null review at index 13787. I droped the null review and after a better look at the features names found suitable categories for those items.</p>
+<p>Lets put:</p>
+<ul>
+<li>ID 72/152/184/136  as General/Bottoms/Socks</li>
+<li>ID 492/772 as General/Jackets/Hoodies</li>
+<li>ID 665 unfortunately can&rsquo;t figure out, so it will be droped</li>
+</ul>
+<h4 id="dataframe-result">Dataframe Result:</h4>
+
+<link rel="stylesheet" href=https://lucastere10.github.io/portfolio/css/hugo-easy-gallery.css />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/df1.png" alt="Revised Dataframe"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/df1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Revised Dataframe</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="data-analysis-and-vizualization">Data Analysis and Vizualization</h4>
+<p>This is what we want to do now:</p>
+<ul>
+<li>Group by division</li>
+<li>Group by departament</li>
+<li>Group by class</li>
+<li>Look for correlations between features</li>
+<li>Create frames for graphics</li>
+</ul>
+
+
+
+
+  
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<h5 id="number-of-reviews-by-age">Number of Reviews By Age</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph1.png" alt="Number of Reviews By Age"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph1.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Number of Reviews By Age</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="correlation-matrix">Correlation Matrix</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph2.png" alt="Correlation Matrix"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph2.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Correlation Matrix</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="count-rating-distribution">Count Rating Distribution</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph3.png" alt="Rating Distribution"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph3.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Rating Distribution</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="scatter-rating-distribution">Scatter Rating Distribution</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph4.png" alt="Scatter Rating Distribution"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph4.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Scatter Rating Distribution</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="reviews-per-divisiondepartmentclass">Reviews per Division/Department/Class</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph5.png" alt="Reviews per Division/Department/Class"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph5.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Reviews per Division/Department/Class</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="recommended-by-agedepartment">Recommended by Age/Department</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph6.png" alt="Recommended by Age/Department"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph6.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Recommended by Age/Department</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="ratings">Ratings</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph7.png" alt="Ratings"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph7.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Ratings</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="departments-treemap">Departments Treemap</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph8.png" alt="Departments Treemap"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph8.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Departments Treemap</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="boxplot-department-preference-by-age">Boxplot Department preference by age</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph9.png" alt="Boxplot Department preference by age"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph9.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Boxplot Department preference by age</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="ratings-by-age">Ratings by Age</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph10.png" alt="Ratings by Age"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph10.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Ratings by Age</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h4 id="nlp">NLP</h4>
+<p>We are going to use TextBlob to make Sentiment Analisys. It&rsquo;s a quite simple package that requires a small number os steps.</p>
+<ul>
+<li>Step 1: Cleaning Data</li>
+<li>Step 2: Get Polarity and Subjectivity values from each review</li>
+<li>Step 3: Use TextBlob Classification Algorithim</li>
+<li>Step 4: Results</li>
+</ul>
+<h5 id="polaritysubjectivity-analysis-by-rating--recommendation">Polarity/Subjectivity Analysis by Rating &amp; Recommendation</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph11.png" alt="Polarity/Subjectivity Analysis by Rating &amp; Recommendation"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph11.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Polarity/Subjectivity Analysis by Rating &amp; Recommendation</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="negative-reviews-by-department">Negative Reviews by Department</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/graph12.png" alt=" Negative Reviews by Department"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/graph12.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p> Negative Reviews by Department</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="positive-wordcloud">Positive WordCloud</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/wordcloud_positive.png" alt="Positive WordCloud"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/wordcloud_positive.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Positive WordCloud</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h5 id="negative-wordcloud">Negative WordCloud</h5>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://lucastere10.github.io/portfolio/images/Project%20IV/wordcloud_negative.png" alt="Negative WordCloud"/>
+    </div>
+    <a href="https://lucastere10.github.io/portfolio/images/Project%20IV/wordcloud_negative.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Negative WordCloud</p>
+      </figcaption>
+  </figure>
+</div>
+
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lucastere10.github.io/portfolio/" >
+    &copy;  Lucas Caldas 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/lucastere10" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/lucas-caldas50/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://lucastere10.github.io/portfolio/js/load-photoswipe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
